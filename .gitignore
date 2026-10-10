@@ -1,0 +1,25 @@
+# ---- Credentials: never commit ----
+# config.json holds the account password in plain text.
+# session.json holds a live session ticket (needed for logout).
+esurfing/config.json
+esurfing/session.json
+
+# ---- Runtime state ----
+esurfing/last.log
+esurfing/keepalive.lock
+**/keepalive.lock
+**/session-watch.lock
+
+# ---- Tool runtime logs ----
+# Deliberately NOT a global *.log rule: the analysis logs under
+# esurfing/文档 and the captured evidence are meant to be readable.
+esurfing/工具/*.log
+
+# ---- Python ----
+__pycache__/
+*.pyc
+
+# ---- Local test evidence ----
+# The author's own captures and raw test logs are kept locally, not published:
+# they contain real MAC addresses, client IPs and account numbers from live runs.
+esurfing/测试记录/
